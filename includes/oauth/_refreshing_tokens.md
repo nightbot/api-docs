@@ -1,11 +1,11 @@
 ## Refreshing Tokens
 
 ```cURL
-curl -X POST "https://api.nightbot.tv/oauth2/token"
-  -d "client_id=d3cfa25e47c9c18e51220e4757d8e57a"
-  -d "client_secret=50951bf21ec9639b210c7fda38665861"
-  -d "grant_type=refresh_token"
-  -d "redirect_uri=https%3A%2F%2Ftesting.com%2Fcallback"
+curl -X POST "https://api.nightbot.tv/oauth2/token" \
+  -d "client_id=d3cfa25e47c9c18e51220e4757d8e57a" \
+  -d "client_secret=50951bf21ec9639b210c7fda38665861" \
+  -d "grant_type=refresh_token" \
+  -d "redirect_uri=https%3A%2F%2Ftesting.com%2Fcallback" \
   -d "refresh_token=cfbdb83aaa4d5c2534c23329de35301a"
 
 {

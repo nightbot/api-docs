@@ -65,7 +65,7 @@ Unsuccessful Response Example:
 
 ```cURL
 # Access the API via header
-curl -X GET "https://api.nightbot.tv/1/me"
+curl -X GET "https://api.nightbot.tv/1/me" \
   -H "Authorization: Bearer 4fb1fed8889ec9d1c319d5b3c9a54b23"
 
 # Access the API via query string

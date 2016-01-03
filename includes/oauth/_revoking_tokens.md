@@ -1,7 +1,7 @@
 ## Revoking Tokens
 
 ```cURL
-curl -X POST "https://api.nightbot.tv/oauth2/token/revoke"
+curl -X POST "https://api.nightbot.tv/oauth2/token/revoke" \
   -d "token=cfbdb83aaa4d5c2534c23329de35301a"
 ```
 
