@@ -2,6 +2,7 @@
 title: Nightbot API Reference
 
 includes:
+  - errors
   - oauth/introduction
   - oauth/basic_steps
   - oauth/scopes
@@ -9,12 +10,18 @@ includes:
   - oauth/implicit_flow
   - oauth/refreshing_tokens
   - oauth/revoking_tokens
+  - channel/introduction
+  - channel/get
+  - channel/post_join
+  - channel/post_part
+  - channel/post_send
 
 language_tabs:
   - cURL
 
 toc_footers:
-  - <a href="https://github.com/tripit/slate">(Docs Powered by Slate)</a>
+  - <a href="https://github.com/nightbot/api-docs" target="_blank">Contribute to these docs</a>
+  - <a href="https://github.com/tripit/slate" target="_blank">(Docs Powered by Slate)</a>
 
 ---
 
