@@ -7,29 +7,35 @@ The channel endpoints allow you to get information about the channel as well as 
 <table>
 	<thead>
 		<tr>
-			<th style="text-align: right">Fields</th>
+			<th>Fields</th>
+			<th>Type</th>
 			<th>Description</th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
-			<td style="text-align: right"><code>_id</code> <em>string</em></td>
+			<td><code>_id</code></td>
+			<td>string</td>
 			<td>Channel ID</td>
 		</tr>
 		<tr>
-			<td style="text-align: right"><code>name</code> <em>string</em></td>
+			<td><code>name</code></td>
+			<td>string</td>
 			<td>Channel name</td>
 		</tr>
 		<tr>
-			<td style="text-align: right"><code>displayName</code> <em>string</em></td>
+			<td><code>displayName</code></td>
+			<td>string</td>
 			<td>Channel display name</td>
 		</tr>
 		<tr>
-			<td style="text-align: right"><code>joined</code> <em>boolean</em></td>
+			<td><code>joined</code></td>
+			<td>boolean</td>
 			<td>Channel join status</td>
 		</tr>
 		<tr>
-			<td style="text-align: right"><code>plan</code> <em>string, optional</em></td>
+			<td><code>plan</code></td>
+			<td>string</td>
 			<td>For future use</td>
 		</tr>
 	</tbody>
