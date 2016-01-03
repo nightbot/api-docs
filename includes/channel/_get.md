@@ -1,4 +1,4 @@
-## Get the channel
+## Get channel
 
 ```cURL
 curl -X GET "https://api.nightbot.tv/1/channel" \

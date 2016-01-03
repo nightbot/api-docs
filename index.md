@@ -3,6 +3,7 @@ title: Nightbot API Reference
 
 includes:
   - errors
+  - userlevels
   - oauth/introduction
   - oauth/basic_steps
   - oauth/scopes
@@ -15,6 +16,7 @@ includes:
   - channel/post_join
   - channel/post_part
   - channel/post_send
+  - commands/introduction
 
 language_tabs:
   - cURL
