@@ -20,7 +20,9 @@ Makes Nightbot send a message to the channel
 
 `channel_send`
 
-**Parameters**
+**Body Parameters**
+
+The following parameters can be sent as a URL encoded string or JSON (using the appropriate `Content-Type` header).
 
 <table>
 	<thead>
