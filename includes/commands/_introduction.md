@@ -7,7 +7,7 @@ The commands endpoints allow you to view, add, edit, and remove channel commands
 <table>
 	<thead>
 		<tr>
-			<th>Fields</th>
+			<th style="width: 100px;">Fields</th>
 			<th>Type</th>
 			<th>Description</th>
 		</tr>
@@ -61,7 +61,7 @@ The commands endpoints allow you to view, add, edit, and remove channel commands
 <table>
 	<thead>
 		<tr>
-			<th>Fields</th>
+			<th style="width: 100px;">Fields</th>
 			<th>Type</th>
 			<th>Description</th>
 		</tr>
