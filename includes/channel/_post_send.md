@@ -14,7 +14,7 @@ Makes Nightbot send a message to the channel
 
 **HTTP Request**
 
-`GET https://api.nightbot.tv/1/channel/send`
+`POST https://api.nightbot.tv/1/channel/send`
 
 **Scope**
 
