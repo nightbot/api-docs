@@ -36,7 +36,7 @@ The commands endpoints allow you to view, add, edit, and remove channel commands
 		<tr>
 			<td><code>message</code></td>
 			<td>string</td>
-			<td>The message Nightbot sends to chat when the command is called. It can contain [variables](https://docs.nightbot.tv/commands/variables) for extra functionality.</td>
+			<td>The message Nightbot sends to chat when the command is called. It can contain <a href="https://docs.nightbot.tv/commands/variables" target="_blank">variables</a> for extra functionality.</td>
 		</tr>
 		<tr>
 			<td><code>coolDown</code></td>
@@ -51,7 +51,7 @@ The commands endpoints allow you to view, add, edit, and remove channel commands
 		<tr>
 			<td><code>userLevel</code></td>
 			<td>enum</td>
-			<td>The [userlevel](#userlevels) required to use the command</td>
+			<td>The <a href="#userlevels">userlevel</a> required to use the command</td>
 		</tr>
 	</tbody>
 </table>
@@ -90,7 +90,7 @@ The commands endpoints allow you to view, add, edit, and remove channel commands
 		<tr>
 			<td><code>userLevel</code></td>
 			<td>enum</td>
-			<td>The [userlevel](#userlevels) required to use the command</td>
+			<td>The <a href="#userlevels">userlevel</a> required to use the command</td>
 		</tr>
 	</tbody>
 </table>
