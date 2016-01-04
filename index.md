@@ -17,6 +17,9 @@ includes:
   - channel/post_part
   - channel/post_send
   - commands/introduction
+  - commands/get
+  - commands/post
+  - commands/get_id
 
 language_tabs:
   - cURL

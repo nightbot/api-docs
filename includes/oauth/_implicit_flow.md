@@ -37,7 +37,7 @@
     <tr>
       <td><code><span>scope</span></code></td>
       <td>Space-delimited set of permissions that the application requests.</td>
-      <td>Identifies the access that your application is requesting. The values passed in this parameter inform the consent screen that is shown to the user. There is an inverse relationship between the number of permissions requested and the likelihood of obtaining user consent. For information about available scopes, see [scopes](#scopes).</td>
+      <td>Identifies the access that your application is requesting. The values passed in this parameter inform the consent screen that is shown to the user. There is an inverse relationship between the number of permissions requested and the likelihood of obtaining user consent. For information about available scopes, see <a href="#scopes">scopes</a>.</td>
     </tr>
     <tr>
       <td><code><span>state</span></code></td>
