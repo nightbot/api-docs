@@ -57,8 +57,8 @@ The following parameters can be sent as a URL encoded string or JSON (using the 
 		</tr>
 		<tr>
 			<td>userLevel</td>
-			<td>string</td>
 			<td>enum</td>
+			<td>Optional</td>
 			<td>The <a href="#userlevels">userlevel</a> required to use the command.</td>
 		</tr>
 	</tbody>
