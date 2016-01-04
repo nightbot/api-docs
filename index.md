@@ -25,6 +25,8 @@ includes:
   - commands/default/get
   - commands/default/get_name
   - commands/default/put_name
+  - me/introduction
+  - me/get
 
 language_tabs:
   - cURL
