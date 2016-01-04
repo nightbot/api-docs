@@ -33,6 +33,9 @@ includes:
   - regulars/get_id
   - regulars/delete_id
   - spam_protection/introduction
+  - spam_protection/get
+  - spam_protection/get_type
+  - spam_protection/put_type
   - timers/introduction
   - timers/get
   - timers/post

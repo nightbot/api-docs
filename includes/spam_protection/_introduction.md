@@ -54,6 +54,11 @@ The spam protection endpoints allow you to view, edit, enable, and disable spam 
 			<td>The length of time in seconds that Nightbot will timeout users for if detected by the filter</td>
 		</tr>
 		<tr>
+			<td><code>limit</code></td>
+			<td>number, optional</td>
+			<td>The barrier at which the filter should timeout users, should the filter have one.</td>
+		</tr>
+		<tr>
 			<td><code>message</code></td>
 			<td>string</td>
 			<td>The timeout message given to a user when they are timed out (if filter is not silenced). If empty string, defaults to Duke Nukem quotes.</td>
