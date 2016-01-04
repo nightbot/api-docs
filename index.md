@@ -32,6 +32,7 @@ includes:
   - regulars/post
   - regulars/get_id
   - regulars/delete_id
+  - spam_protection/introduction
   - timers/introduction
   - timers/get
   - timers/post

@@ -48,19 +48,29 @@ The me endpoint provides you with information about the authorized user
 	</thead>
 	<tbody>
 		<tr>
+			<td><code>admin</code></td>
+			<td>boolean</td>
+			<td>Whether or not the user is a Nightbot administrator</td>
+		</tr>
+		<tr>
+			<td><code>avatar</code></td>
+			<td>string</td>
+			<td>User avatar link</td>
+		</tr>
+		<tr>
 			<td><code>_id</code></td>
 			<td>string</td>
 			<td>User id</td>
 		</tr>
 		<tr>
-			<td><code>name</code></td>
-			<td>string</td>
-			<td>User name</td>
-		</tr>
-		<tr>
 			<td><code>displayName</code></td>
 			<td>string</td>
 			<td>User display name</td>
+		</tr>
+		<tr>
+			<td><code>name</code></td>
+			<td>string</td>
+			<td>User name</td>
 		</tr>
 		<tr>
 			<td><code>provider</code></td>
@@ -71,16 +81,6 @@ The me endpoint provides you with information about the authorized user
 			<td><code>providerId</code></td>
 			<td>string</td>
 			<td>The unique id for this user at the auth provider</td>
-		</tr>
-		<tr>
-			<td><code>avatar</code></td>
-			<td>string</td>
-			<td>User avatar link</td>
-		</tr>
-		<tr>
-			<td><code>admin</code></td>
-			<td>boolean</td>
-			<td>Whether or not the user is a Nightbot administrator</td>
 		</tr>
 	</tbody>
 </table>

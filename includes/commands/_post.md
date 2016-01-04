@@ -48,6 +48,12 @@ The following parameters can be sent as a URL encoded string or JSON (using the 
 	</thead>
 	<tbody>
 		<tr>
+			<td>coolDown</td>
+			<td>number</td>
+			<td>Optional</td>
+			<td>The minimum amount of seconds between command usage (prevents spam). Defaults to <code>30</code></td>
+		</tr>
+		<tr>
 			<td>message</td>
 			<td>string</td>
 			<td>Required</td>
@@ -58,12 +64,6 @@ The following parameters can be sent as a URL encoded string or JSON (using the 
 			<td>string</td>
 			<td>Required</td>
 			<td>The command name (usually prefixed with a !, but any prefix [or none] can be used)</td>
-		</tr>
-		<tr>
-			<td>coolDown</td>
-			<td>number</td>
-			<td>Optional</td>
-			<td>The minimum amount of seconds between command usage (prevents spam). Defaults to <code>30</code></td>
 		</tr>
 		<tr>
 			<td>userLevel</td>

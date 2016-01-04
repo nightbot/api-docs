@@ -31,10 +31,6 @@ The request must include the following parameters:
   </thead>
   <tbody>
     <tr>
-      <td><code><span>refresh_token</span></code></td>
-      <td>The refresh token of the access token being refreshed.</td>
-    </tr>
-    <tr>
       <td><code><span>client_id</span></code></td>
       <td>The client ID of the app.</td>
     </tr>
@@ -43,13 +39,17 @@ The request must include the following parameters:
       <td>The client secret of the app.</td>
     </tr>
     <tr>
+      <td><code><span>grant_type</span></code></td>
+      <td>As defined in the OAuth 2 specification, this field must contain a
+      value of <code><span>refresh_token</span></code>.</td>
+    </tr>
+    <tr>
       <td><code><span>redirect_uri</span></code></td>
       <td>One of the redirect URIs listed for the app.</td>
     </tr>
     <tr>
-      <td><code><span>grant_type</span></code></td>
-      <td>As defined in the OAuth 2 specification, this field must contain a
-      value of <code><span>refresh_token</span></code>.</td>
+      <td><code><span>refresh_token</span></code></td>
+      <td>The refresh token of the access token being refreshed.</td>
     </tr>
   </tbody>
 </table>

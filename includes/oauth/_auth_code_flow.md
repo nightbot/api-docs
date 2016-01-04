@@ -24,12 +24,7 @@ Be sure to keep your client secret confidential. It should only be kept server-s
   </thead>
   <tbody>
     <tr>
-      <td><code><span>response_type</span></code></td>
-      <td><code>code</code></td>
-      <td>Determines whether the OAuth 2 endpoint returns an authorization code. Web server applications should use code.</td>
-    </tr>
-    <tr>
-      <td><code><span>client_type</span></code></td>
+      <td><code><span>client_id</span></code></td>
       <td>The client ID for the app</td>
       <td>Identifies the client that is making the request. The value passed in this parameter must exactly match the value for the app.</td>
     </tr>
@@ -37,6 +32,11 @@ Be sure to keep your client secret confidential. It should only be kept server-s
       <td><code><span>redirect_uri</span></code></td>
       <td>One of the redirect url values listed for the app</td>
       <td>Determines where the response is sent. The value of this parameter must exactly match one of the values listed for this app (including the http or https scheme and casing).</td>
+    </tr>
+    <tr>
+      <td><code><span>response_type</span></code></td>
+      <td><code>code</code></td>
+      <td>Determines whether the OAuth 2 endpoint returns an authorization code. Web server applications should use code.</td>
     </tr>
     <tr>
       <td><code><span>scope</span></code></td>
@@ -96,10 +96,6 @@ The request must include the following parameters:
   </thead>
   <tbody>
     <tr>
-      <td><code><span>code</span></code></td>
-      <td>The authorization code returned from the initial request.</td>
-    </tr>
-    <tr>
       <td><code><span>client_id</span></code></td>
       <td>The client ID of the app.</td>
     </tr>
@@ -108,13 +104,17 @@ The request must include the following parameters:
       <td>The client secret of the app.</td>
     </tr>
     <tr>
-      <td><code><span>redirect_uri</span></code></td>
-      <td>One of the redirect URIs listed for the app.</td>
+      <td><code><span>code</span></code></td>
+      <td>The authorization code returned from the initial request.</td>
     </tr>
     <tr>
       <td><code><span>grant_type</span></code></td>
       <td>As defined in the OAuth 2 specification, this field must contain a
       value of <code><span>authorization_code</span></code>.</td>
+    </tr>
+    <tr>
+      <td><code><span>redirect_uri</span></code></td>
+      <td>One of the redirect URIs listed for the app.</td>
     </tr>
   </tbody>
 </table>
@@ -134,13 +134,13 @@ A successful response from the token endpoint will return an access token and a 
       <td>The token that can be sent to the Nightbot API.</td>
     </tr>
     <tr>
+      <td><code><span>expires_in</span></code></td>
+      <td>The remaining lifetime of the access token.</td>
+    </tr>
+    <tr>
       <td><code><span>refresh_token</span></code></td>
       <td>A token that may be used to obtain a new access token. Refresh tokens
       are valid until the user revokes access, they expire, or they are used.
-    </tr>
-    <tr>
-      <td><code><span>expires_in</span></code></td>
-      <td>The remaining lifetime of the access token.</td>
     </tr>
     <tr>
       <td><code><span>token_type</span></code></td>

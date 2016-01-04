@@ -45,18 +45,6 @@ The following parameters can be sent as a URL encoded string or JSON (using the 
 	</thead>
 	<tbody>
 		<tr>
-			<td>message</td>
-			<td>string</td>
-			<td>Optional</td>
-			<td>The message to send to chat. It can contain <a href="https://docs.nightbot.tv/commands/variables" target="_blank">variables</a> for extra functionality. Maximum length: 400 characters</td>
-		</tr>
-		<tr>
-			<td>name</td>
-			<td>string</td>
-			<td>Optional</td>
-			<td>The command name (usually prefixed with a !, but any prefix [or none] can be used)</td>
-		</tr>
-		<tr>
 			<td>coolDown</td>
 			<td>number</td>
 			<td>Optional</td>
@@ -67,6 +55,18 @@ The following parameters can be sent as a URL encoded string or JSON (using the 
 			<td>number</td>
 			<td>Optional</td>
 			<td>The number of times a command has been used (only increments if the command uses the count variable). Defaults to <code>0</code></td>
+		</tr>
+		<tr>
+			<td>message</td>
+			<td>string</td>
+			<td>Optional</td>
+			<td>The message to send to chat. It can contain <a href="https://docs.nightbot.tv/commands/variables" target="_blank">variables</a> for extra functionality. Maximum length: 400 characters</td>
+		</tr>
+		<tr>
+			<td>name</td>
+			<td>string</td>
+			<td>Optional</td>
+			<td>The command name (usually prefixed with a !, but any prefix [or none] can be used)</td>
 		</tr>
 		<tr>
 			<td>userLevel</td>

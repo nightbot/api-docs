@@ -19,11 +19,6 @@ The channel endpoints allow you to get information about the channel as well as 
 			<td>Channel ID</td>
 		</tr>
 		<tr>
-			<td><code>name</code></td>
-			<td>string</td>
-			<td>Channel name</td>
-		</tr>
-		<tr>
 			<td><code>displayName</code></td>
 			<td>string</td>
 			<td>Channel display name</td>
@@ -32,6 +27,11 @@ The channel endpoints allow you to get information about the channel as well as 
 			<td><code>joined</code></td>
 			<td>boolean</td>
 			<td>Channel join status</td>
+		</tr>
+		<tr>
+			<td><code>name</code></td>
+			<td>string</td>
+			<td>Channel name</td>
 		</tr>
 		<tr>
 			<td><code>plan</code></td>

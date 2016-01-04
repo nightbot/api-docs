@@ -20,12 +20,7 @@
   </thead>
   <tbody>
     <tr>
-      <td><code><span>response_type</span></code></td>
-      <td><code>token</code></td>
-      <td>Determines whether the OAuth 2 endpoint returns a token in the fragment of the redirect url.</td>
-    </tr>
-    <tr>
-      <td><code><span>client_type</span></code></td>
+      <td><code><span>client_id</span></code></td>
       <td>The client ID for the app</td>
       <td>Identifies the client that is making the request. The value passed in this parameter must exactly match the value for the app.</td>
     </tr>
@@ -33,6 +28,11 @@
       <td><code><span>redirect_uri</span></code></td>
       <td>One of the redirect url values listed for the app</td>
       <td>Determines where the response is sent. The value of this parameter must exactly match one of the values listed for this app (including the http or https scheme and casing).</td>
+    </tr>
+    <tr>
+      <td><code><span>response_type</span></code></td>
+      <td><code>token</code></td>
+      <td>Determines whether the OAuth 2 endpoint returns a token in the fragment of the redirect url.</td>
     </tr>
     <tr>
       <td><code><span>scope</span></code></td>

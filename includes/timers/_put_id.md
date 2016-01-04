@@ -52,18 +52,6 @@ The following parameters can be sent as a URL encoded string or JSON (using the 
 			<td>The status of the timer. A value of <code>true</code> means the timer is enabled, while <code>false</code> means the timer is disabled and will not execute.</td>
 		</tr>
 		<tr>
-			<td>message</td>
-			<td>string</td>
-			<td>Optional</td>
-			<td>The message to send to chat. It can contain <a href="https://docs.nightbot.tv/commands/variables" target="_blank">variables</a> for extra functionality. Maximum length: 400 characters</td>
-		</tr>
-		<tr>
-			<td>name</td>
-			<td>string</td>
-			<td>Optional</td>
-			<td>The timer name (has no real significance but gives you a quick reference to what the timer does)</td>
-		</tr>
-		<tr>
 			<td>interval</td>
 			<td>string</td>
 			<td>Optional</td>
@@ -74,6 +62,18 @@ The following parameters can be sent as a URL encoded string or JSON (using the 
 			<td>number</td>
 			<td>Optional</td>
 			<td>This is the minimum amount of chat lines per 5 minutes required to activate the timer. This is useful in slow chats to prevent Nightbot from spamming in an empty channel.</td>
+		</tr>
+		<tr>
+			<td>message</td>
+			<td>string</td>
+			<td>Optional</td>
+			<td>The message to send to chat. It can contain <a href="https://docs.nightbot.tv/commands/variables" target="_blank">variables</a> for extra functionality. Maximum length: 400 characters</td>
+		</tr>
+		<tr>
+			<td>name</td>
+			<td>string</td>
+			<td>Optional</td>
+			<td>The timer name (has no real significance but gives you a quick reference to what the timer does)</td>
 		</tr>
 	</tbody>
 </table>
