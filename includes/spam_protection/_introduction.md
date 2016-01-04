@@ -7,7 +7,7 @@ The spam protection endpoints allow you to view, edit, enable, and disable spam 
 <table>
 	<thead>
 		<tr>
-			<th style="width: 100px;">Fields</th>
+			<th style="width: 120px;">Fields</th>
 			<th>Type</th>
 			<th>Description</th>
 		</tr>
