@@ -20,6 +20,8 @@ includes:
   - commands/get
   - commands/post
   - commands/get_id
+  - commands/put_id
+  - commands/delete_id
 
 language_tabs:
   - cURL
