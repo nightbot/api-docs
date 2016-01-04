@@ -27,6 +27,11 @@ includes:
   - commands/default/put_name
   - me/introduction
   - me/get
+  - regulars/introduction
+  - regulars/get
+  - regulars/post
+  - regulars/get_id
+  - regulars/delete_id
 
 language_tabs:
   - cURL
