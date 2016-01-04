@@ -20,7 +20,7 @@ curl -X PUT "https://api.nightbot.tv/1/commands/568a02834184d1a07660f380" \
 }
 ```
 
-Edits a command by its id.
+Edits a custom command by its id.
 
 **HTTP Request**
 

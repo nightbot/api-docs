@@ -23,7 +23,7 @@ curl -X GET "https://api.nightbot.tv/1/commands" \
 }
 ```
 
-Gets the current API user's commands list
+Gets the current API user's custom commands list
 
 **HTTP Request**
 

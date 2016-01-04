@@ -27,7 +27,7 @@ Edits a default command by its name.
 
 **Scope**
 
-`commands`
+`commands_default`
 
 **Body Parameters**
 

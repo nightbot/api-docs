@@ -23,7 +23,7 @@ curl -X POST "https://api.nightbot.tv/1/commands" \
 }
 ```
 
-Adds a new command to the current user's channel
+Adds a new custom command to the current user's channel
 
 **HTTP Request**
 
