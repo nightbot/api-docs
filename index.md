@@ -32,6 +32,12 @@ includes:
   - regulars/post
   - regulars/get_id
   - regulars/delete_id
+  - timers/introduction
+  - timers/get
+  - timers/post
+  - timers/get_id
+  - timers/put_id
+  - timers/delete_id
 
 language_tabs:
   - cURL

@@ -1,34 +1,35 @@
-## Edit custom command by id
+## Edit timer by id
 
 ```cURL
-curl -X PUT "https://api.nightbot.tv/1/commands/568a02834184d1a07660f380" \
+curl -X PUT "https://api.nightbot.tv/1/timers/568a02834184d1a07660f380" \
   -H "Authorization: Bearer 4fb1fed8889ec9d1c319d5b3c9a54b23" \
-  -d "name=!testing"
+  -d "name=testing"
 
 {
     "status": 200,
-    "command": {
+    "timer": {
         "createdAt": "2016-01-04T05:26:27.593Z",
         "updatedAt": "2016-01-04T05:26:27.593Z",
-        "name": "!testing",
+        "name": "testing",
         "message": "test message",
         "_id": "568a02834184d1a07660f380",
-        "coolDown": 5,
-        "count": 0,
-        "userLevel": "everyone"
+        "interval": "*/15 * * * *",
+        "nextRunAt": "1970-01-01T00:00:00.000Z",
+        "lines": 2,
+        "enabled": true
     }
 }
 ```
 
-Edits a custom command by its id.
+Edits a timer by its id.
 
 **HTTP Request**
 
-`PUT https://api.nightbot.tv/1/commands/:id`
+`PUT https://api.nightbot.tv/1/timers/:id`
 
 **Scope**
 
-`commands`
+`timers`
 
 **Body Parameters**
 
@@ -45,6 +46,12 @@ The following parameters can be sent as a URL encoded string or JSON (using the 
 	</thead>
 	<tbody>
 		<tr>
+			<td>enabled</td>
+			<td>boolean</td>
+			<td>Optional</td>
+			<td>The status of the timer. A value of <code>true</code> means the timer is enabled, while <code>false</code> means the timer is disabled and will not execute.</td>
+		</tr>
+		<tr>
 			<td>message</td>
 			<td>string</td>
 			<td>Optional</td>
@@ -54,25 +61,19 @@ The following parameters can be sent as a URL encoded string or JSON (using the 
 			<td>name</td>
 			<td>string</td>
 			<td>Optional</td>
-			<td>The command name (usually prefixed with a !, but any prefix [or none] can be used)</td>
+			<td>The timer name (has no real significance but gives you a quick reference to what the timer does)</td>
 		</tr>
 		<tr>
-			<td>coolDown</td>
+			<td>interval</td>
+			<td>string</td>
+			<td>Optional</td>
+			<td>The timer interval in cron syntax. Minimum interval is once per 5 minutes.</td>
+		</tr>
+		<tr>
+			<td>lines</td>
 			<td>number</td>
 			<td>Optional</td>
-			<td>The minimum amount of seconds between command usage (prevents spam). Defaults to <code>30</code></td>
-		</tr>
-		<tr>
-			<td>count</td>
-			<td>number</td>
-			<td>Optional</td>
-			<td>The number of times a command has been used (only increments if the command uses the count variable). Defaults to <code>0</code></td>
-		</tr>
-		<tr>
-			<td>userLevel</td>
-			<td>enum</td>
-			<td>Optional</td>
-			<td>The <a href="#userlevels">userlevel</a> required to use the command. Defaults to <code>everyone</code></td>
+			<td>This is the minimum amount of chat lines per 5 minutes required to activate the timer. This is useful in slow chats to prevent Nightbot from spamming in an empty channel.</td>
 		</tr>
 	</tbody>
 </table>
