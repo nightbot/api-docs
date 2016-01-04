@@ -2,31 +2,7 @@
 
 The me endpoint provides you with information about the authorized user
 
-## Me Resource
-
-<table>
-	<thead>
-		<tr>
-			<th style="width: 100px;">Fields</th>
-			<th>Type</th>
-			<th>Description</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td><code>authorization</code></td>
-			<td>sub-resource</td>
-			<td>The current user's authorization</td>
-		</tr>
-		<tr>
-			<td><code>user</code></td>
-			<td>sub-resource</td>
-			<td>The current user</td>
-		</tr>
-	</tbody>
-</table>
-
-### Authorization Sub-Resource
+## Authorization Resource
 
 <table>
 	<thead>
@@ -49,7 +25,7 @@ The me endpoint provides you with information about the authorized user
 		</tr>
 		<tr>
 			<td><code>credentials</code></td>
-			<td>sub-object</td>
+			<td>object</td>
 			<td>Contains access token <code>expires</code> as a date and <code>client</code> id as a string (of the app the current access token belongs to)</td>
 		</tr>
 		<tr>
@@ -60,7 +36,7 @@ The me endpoint provides you with information about the authorized user
 	</tbody>
 </table>
 
-### User Sub-Resource
+## User Resource
 
 <table>
 	<thead>
