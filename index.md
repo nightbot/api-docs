@@ -22,6 +22,9 @@ includes:
   - commands/get_id
   - commands/put_id
   - commands/delete_id
+  - commands/default/get
+  - commands/default/get_name
+  - commands/default/put_name
 
 language_tabs:
   - cURL
