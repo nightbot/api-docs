@@ -7,7 +7,7 @@ curl -X GET "https://api.nightbot.tv/1/regulars" \
 {
     "_total": 30,
     "status": 200,
-    "commands": [
+    "regulars": [
         {
             "_id": "56739fb5d0c250946ed67448",
             "createdAt": "2015-12-18T05:55:01.458Z",
@@ -31,3 +31,36 @@ Gets the current API user's regulars list
 **Scope**
 
 `regulars`
+
+**Query String Parameters**
+
+<table>
+    <thead>
+        <tr>
+            <th>Parameter</th>
+            <th>Type</th>
+            <th>Required</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>limit</td>
+            <td>number</td>
+            <td>Optional</td>
+            <td>The is the maximum amount of regulars to return in the request (minimum 1, maximum 100)</td>
+        </tr>
+        <tr>
+            <td>offset</td>
+            <td>number</td>
+            <td>Optional</td>
+            <td>This is the regular offset count that is used for pagination</td>
+        </tr>
+        <tr>
+            <td>q</td>
+            <td>string</td>
+            <td>Optional</td>
+            <td>A <code>displayName</code> to search for (case insensitive)</td>
+        </tr>
+    </tbody>
+</table>
