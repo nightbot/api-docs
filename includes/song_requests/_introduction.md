@@ -168,7 +168,7 @@ The song request endpoints allow you to view, add, edit, and delete song from th
 	<tbody>
 		<tr>
 			<td><code>_position</code></td>
-			<td>number</td>
+			<td>number, optional</td>
 			<td>The queue item's position in the queue</td>
 		</tr>
 		<tr>

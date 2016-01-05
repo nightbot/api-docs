@@ -41,6 +41,13 @@ includes:
   - song_requests/playlist/post_import
   - song_requests/playlist/get_id
   - song_requests/playlist/delete_id
+  - song_requests/queue/get
+  - song_requests/queue/post
+  - song_requests/queue/delete
+  - song_requests/queue/post_skip
+  - song_requests/queue/get_id
+  - song_requests/queue/delete_id
+  - song_requests/queue/post_id_promote
   - spam_protection/introduction
   - spam_protection/get
   - spam_protection/get_type

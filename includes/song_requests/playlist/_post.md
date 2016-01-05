@@ -3,7 +3,7 @@
 ```cURL
 curl -X POST "https://api.nightbot.tv/1/song_requests/playlist" \
   -H "Authorization: Bearer 4fb1fed8889ec9d1c319d5b3c9a54b23" \
-  -d "q=test_user"
+  -d "q=https%3A%2F%2Fyoutu.be%2FN9qYF9DZPdw"
 
 {
     "status": 200,
