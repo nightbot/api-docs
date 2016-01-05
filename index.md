@@ -33,6 +33,8 @@ includes:
   - regulars/get_id
   - regulars/delete_id
   - song_requests/introduction
+  - song_requests/get
+  - song_requests/put
   - spam_protection/introduction
   - spam_protection/get
   - spam_protection/get_type
