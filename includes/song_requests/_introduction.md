@@ -118,16 +118,6 @@ The song request endpoints allow you to view, add, edit, and delete song from th
 			<td>The time the queue item was created</td>
 		</tr>
 		<tr>
-			<td><code>playing</code></td>
-			<td>boolean</td>
-			<td><code>true</code> if the queue item is playing, <code>false</code> otherwise</td>
-		</tr>
-		<tr>
-			<td><code>skipped</code></td>
-			<td>boolean</td>
-			<td><code>true</code> if the queue item is skipped, <code>false</code> otherwise</td>
-		</tr>
-		<tr>
 			<td><code>track</code></td>
 			<td>object</td>
 			<td>Track Information</td>
