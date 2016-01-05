@@ -32,6 +32,7 @@ includes:
   - regulars/post
   - regulars/get_id
   - regulars/delete_id
+  - song_requests/introduction
   - spam_protection/introduction
   - spam_protection/get
   - spam_protection/get_type
