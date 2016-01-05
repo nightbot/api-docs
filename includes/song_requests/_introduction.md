@@ -90,3 +90,171 @@ The song request endpoints allow you to view, add, edit, and delete song from th
 		</tr>
 	</tbody>
 </table>
+
+## Queue Item Resource
+
+<table>
+	<thead>
+		<tr>
+			<th style="width: 120px;">Fields</th>
+			<th>Type</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><code>_position</code></td>
+			<td>number</td>
+			<td>The queue item's position in the queue</td>
+		</tr>
+		<tr>
+			<td><code>_id</code></td>
+			<td>string</td>
+			<td>The queue item's unique id</td>
+		</tr>
+		<tr>
+			<td><code>createdAt</code></td>
+			<td>date</td>
+			<td>The time the queue item was created</td>
+		</tr>
+		<tr>
+			<td><code>playing</code></td>
+			<td>boolean</td>
+			<td><code>true</code> if the queue item is playing, <code>false</code> otherwise</td>
+		</tr>
+		<tr>
+			<td><code>skipped</code></td>
+			<td>boolean</td>
+			<td><code>true</code> if the queue item is skipped, <code>false</code> otherwise</td>
+		</tr>
+		<tr>
+			<td><code>track</code></td>
+			<td>object</td>
+			<td>Track Information</td>
+		</tr>
+		<tr>
+			<td><code>track</code><br><code>.artist</code></td>
+			<td>string, optional</td>
+			<td>Track Artist</td>
+		</tr>
+		<tr>
+			<td><code>track</code><br><code>.duration</code></td>
+			<td>number</td>
+			<td>Track Duration (in seconds)</td>
+		</tr>
+		<tr>
+			<td><code>track</code><br><code>.provider</code></td>
+			<td>enum</td>
+			<td>Track Provider (like "youtube" or "soundcloud")</td>
+		</tr>
+		<tr>
+			<td><code>track</code><br><code>.providerId</code></td>
+			<td>string</td>
+			<td>Track Provider's unique id</td>
+		</tr>
+		<tr>
+			<td><code>track</code><br><code>.title</code></td>
+			<td>string</td>
+			<td>Track Title</td>
+		</tr>
+		<tr>
+			<td><code>track</code><br><code>.url</code></td>
+			<td>string</td>
+			<td>Track URL</td>
+		</tr>
+		<tr>
+			<td><code>user</code></td>
+			<td>object</td>
+			<td>Information about who the queue item belongs to</td>
+		</tr>
+		<tr>
+			<td><code>user</code><br><code>.displayName</code></td>
+			<td>string</td>
+			<td>User display name</td>
+		</tr>
+		<tr>
+			<td><code>user</code><br><code>.name</code></td>
+			<td>string</td>
+			<td>User unique name</td>
+		</tr>
+		<tr>
+			<td><code>user</code><br><code>.provider</code></td>
+			<td>enum</td>
+			<td>User provider (like "twitch" or "youtube")</td>
+		</tr>
+		<tr>
+			<td><code>user</code><br><code>.providerId</code></td>
+			<td>string</td>
+			<td>User provider's unique id</td>
+		</tr>
+		<tr>
+			<td><code>updatedAt</code></td>
+			<td>date</td>
+			<td>The last time the queue item was updated</td>
+		</tr>
+	</tbody>
+</table>
+
+## Playlist Item Resource
+
+<table>
+	<thead>
+		<tr>
+			<th style="width: 120px;">Fields</th>
+			<th>Type</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><code>_id</code></td>
+			<td>string</td>
+			<td>The playlist item's unique id</td>
+		</tr>
+		<tr>
+			<td><code>createdAt</code></td>
+			<td>date</td>
+			<td>The time the playlist item was created</td>
+		</tr>
+		<tr>
+			<td><code>track</code></td>
+			<td>object</td>
+			<td>Track Information</td>
+		</tr>
+		<tr>
+			<td><code>track</code><br><code>.artist</code></td>
+			<td>string, optional</td>
+			<td>Track Artist</td>
+		</tr>
+		<tr>
+			<td><code>track</code><br><code>.duration</code></td>
+			<td>number</td>
+			<td>Track Duration (in seconds)</td>
+		</tr>
+		<tr>
+			<td><code>track</code><br><code>.provider</code></td>
+			<td>enum</td>
+			<td>Track Provider (like "youtube" or "soundcloud")</td>
+		</tr>
+		<tr>
+			<td><code>track</code><br><code>.providerId</code></td>
+			<td>string</td>
+			<td>Track Provider's unique id</td>
+		</tr>
+		<tr>
+			<td><code>track</code><br><code>.title</code></td>
+			<td>string</td>
+			<td>Track Title</td>
+		</tr>
+		<tr>
+			<td><code>track</code><br><code>.url</code></td>
+			<td>string</td>
+			<td>Track URL</td>
+		</tr>
+		<tr>
+			<td><code>updatedAt</code></td>
+			<td>date</td>
+			<td>The last time the playlist item was updated</td>
+		</tr>
+	</tbody>
+</table>
