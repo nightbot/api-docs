@@ -7,7 +7,7 @@ The song request endpoints allow you to view, add, edit, and delete song from th
 <table>
 	<thead>
 		<tr>
-			<th style="width: 120px;">Fields</th>
+			<th style="width: 150px;">Fields</th>
 			<th>Type</th>
 			<th>Description</th>
 		</tr>
