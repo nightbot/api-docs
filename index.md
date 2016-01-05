@@ -35,6 +35,12 @@ includes:
   - song_requests/introduction
   - song_requests/get
   - song_requests/put
+  - song_requests/playlist/get
+  - song_requests/playlist/post
+  - song_requests/playlist/delete
+  - song_requests/playlist/post_import
+  - song_requests/playlist/get_id
+  - song_requests/playlist/delete_id
   - spam_protection/introduction
   - spam_protection/get
   - spam_protection/get_type

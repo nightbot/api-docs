@@ -91,6 +91,70 @@ The song request endpoints allow you to view, add, edit, and delete song from th
 	</tbody>
 </table>
 
+## Playlist Item Resource
+
+<table>
+	<thead>
+		<tr>
+			<th style="width: 120px;">Fields</th>
+			<th>Type</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><code>_id</code></td>
+			<td>string</td>
+			<td>The playlist item's unique id</td>
+		</tr>
+		<tr>
+			<td><code>createdAt</code></td>
+			<td>date</td>
+			<td>The time the playlist item was created</td>
+		</tr>
+		<tr>
+			<td><code>track</code></td>
+			<td>object</td>
+			<td>Track Information</td>
+		</tr>
+		<tr>
+			<td><code>track</code><br><code>.artist</code></td>
+			<td>string, optional</td>
+			<td>Track Artist</td>
+		</tr>
+		<tr>
+			<td><code>track</code><br><code>.duration</code></td>
+			<td>number</td>
+			<td>Track Duration (in seconds)</td>
+		</tr>
+		<tr>
+			<td><code>track</code><br><code>.provider</code></td>
+			<td>enum</td>
+			<td>Track Provider (like "youtube" or "soundcloud")</td>
+		</tr>
+		<tr>
+			<td><code>track</code><br><code>.providerId</code></td>
+			<td>string</td>
+			<td>Track Provider's unique id</td>
+		</tr>
+		<tr>
+			<td><code>track</code><br><code>.title</code></td>
+			<td>string</td>
+			<td>Track Title</td>
+		</tr>
+		<tr>
+			<td><code>track</code><br><code>.url</code></td>
+			<td>string</td>
+			<td>Track URL</td>
+		</tr>
+		<tr>
+			<td><code>updatedAt</code></td>
+			<td>date</td>
+			<td>The last time the playlist item was updated</td>
+		</tr>
+	</tbody>
+</table>
+
 ## Queue Item Resource
 
 <table>
@@ -181,70 +245,6 @@ The song request endpoints allow you to view, add, edit, and delete song from th
 			<td><code>updatedAt</code></td>
 			<td>date</td>
 			<td>The last time the queue item was updated</td>
-		</tr>
-	</tbody>
-</table>
-
-## Playlist Item Resource
-
-<table>
-	<thead>
-		<tr>
-			<th style="width: 120px;">Fields</th>
-			<th>Type</th>
-			<th>Description</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td><code>_id</code></td>
-			<td>string</td>
-			<td>The playlist item's unique id</td>
-		</tr>
-		<tr>
-			<td><code>createdAt</code></td>
-			<td>date</td>
-			<td>The time the playlist item was created</td>
-		</tr>
-		<tr>
-			<td><code>track</code></td>
-			<td>object</td>
-			<td>Track Information</td>
-		</tr>
-		<tr>
-			<td><code>track</code><br><code>.artist</code></td>
-			<td>string, optional</td>
-			<td>Track Artist</td>
-		</tr>
-		<tr>
-			<td><code>track</code><br><code>.duration</code></td>
-			<td>number</td>
-			<td>Track Duration (in seconds)</td>
-		</tr>
-		<tr>
-			<td><code>track</code><br><code>.provider</code></td>
-			<td>enum</td>
-			<td>Track Provider (like "youtube" or "soundcloud")</td>
-		</tr>
-		<tr>
-			<td><code>track</code><br><code>.providerId</code></td>
-			<td>string</td>
-			<td>Track Provider's unique id</td>
-		</tr>
-		<tr>
-			<td><code>track</code><br><code>.title</code></td>
-			<td>string</td>
-			<td>Track Title</td>
-		</tr>
-		<tr>
-			<td><code>track</code><br><code>.url</code></td>
-			<td>string</td>
-			<td>Track URL</td>
-		</tr>
-		<tr>
-			<td><code>updatedAt</code></td>
-			<td>date</td>
-			<td>The last time the playlist item was updated</td>
 		</tr>
 	</tbody>
 </table>
