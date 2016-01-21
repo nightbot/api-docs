@@ -34,7 +34,7 @@ Adds a new queue item to the current user's channel.
 
 **HTTP Request**
 
-`POST https://api.nightbot.tv/1/song_requests/queuet`
+`POST https://api.nightbot.tv/1/song_requests/queue`
 
 **Scope**
 
