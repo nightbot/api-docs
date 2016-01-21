@@ -81,7 +81,8 @@ curl -X POST "https://api.nightbot.tv/oauth2/token" \
   "access_token": "4fb1fed8889ec9d1c319d5b3c9a54b23",
   "refresh_token": "b98dbbc2e64789532de2c9e7c69b0f89",
   "token_type": "bearer",
-  "expires_in": 2592000
+  "expires_in": 2592000,
+  "scope": "commands timers"
 }
 ```
 
@@ -146,6 +147,11 @@ A successful response from the token endpoint will return an access token and a 
       <td><code><span>token_type</span></code></td>
       <td>Identifies the type of token returned. At this time, this field will
       always have the value <code><span>bearer</span></code>.</td>
+    </tr>
+    <tr>
+      <td><code><span>scope</span></code></td>
+      <td>A space separated list of scopes attached to the token returned.
+      This should be identical to scopes requested during authorization.</td>
     </tr>
   </tbody>
 </table>
