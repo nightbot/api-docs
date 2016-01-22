@@ -12,7 +12,8 @@ curl -X POST "https://api.nightbot.tv/oauth2/token" \
   "access_token": "4fb1fed8889ec9d1c319d5b3c9a54b23",
   "refresh_token": "b98dbbc2e64789532de2c9e7c69b0f89",
   "token_type": "bearer",
-  "expires_in": 2592000
+  "expires_in": 2592000,
+  "scope": "commands timers"
 }
 ```
 
