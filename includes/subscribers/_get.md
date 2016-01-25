@@ -48,13 +48,13 @@ Gets the current API user's subscribers list
             <td>limit</td>
             <td>number</td>
             <td>Optional</td>
-            <td>The is the maximum amount of regulars to return in the request (minimum 1, maximum 100)</td>
+            <td>The is the maximum amount of subscribers to return in the request (minimum 1, maximum 100)</td>
         </tr>
         <tr>
             <td>offset</td>
             <td>number</td>
             <td>Optional</td>
-            <td>This is the regular offset count that is used for pagination</td>
+            <td>This is the subscriber offset count that is used for pagination</td>
         </tr>
         <tr>
             <td>q</td>
