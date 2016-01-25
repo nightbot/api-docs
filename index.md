@@ -52,6 +52,11 @@ includes:
   - spam_protection/get
   - spam_protection/get_type
   - spam_protection/put_type
+  - subscribers/introduction
+  - subscribers/get
+  - subscribers/post
+  - subscribers/get_id
+  - subscribers/delete_id
   - timers/introduction
   - timers/get
   - timers/post
