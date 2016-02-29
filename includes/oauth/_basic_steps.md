@@ -4,7 +4,7 @@ All applications follow a basic pattern when accessing the Nightbot API using OA
 
 **1. Obtain OAuth 2 credentials from the Nightbot Control Panel.**
 
-  Visit the Nightbot Control Panel's Account [Applications](https://beta.nightbot.tv/account/applications) page to obtain OAuth 2 credentials such as a client ID and client secret that are known to both Google and your application.
+  Visit the Nightbot Control Panel's Account [Applications](https://beta.nightbot.tv/account/applications) page to obtain OAuth 2 credentials such as a client ID and client secret that are known to both Nightbot and your application.
 
 **2. Obtain an access token from the Nightbot API.**
 
