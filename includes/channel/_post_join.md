@@ -13,7 +13,7 @@ Makes Nightbot join (enter) the current user's channel
 
 **HTTP Request**
 
-`GET https://api.nightbot.tv/1/channel/join`
+`POST https://api.nightbot.tv/1/channel/join`
 
 **Scope**
 

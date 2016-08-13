@@ -13,7 +13,7 @@ Makes Nightbot part (leave) the current user's channel
 
 **HTTP Request**
 
-`GET https://api.nightbot.tv/1/channel/part`
+`POST https://api.nightbot.tv/1/channel/part`
 
 **Scope**
 
