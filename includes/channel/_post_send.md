@@ -20,6 +20,10 @@ Makes Nightbot send a message to the channel
 
 `channel_send`
 
+**Rate Limit**
+
+This endpoint is rate limited to 1 request per 5 seconds. If exceeded a HTTP 429 "Too Many Requests" response is returned.
+
 **Body Parameters**
 
 The following parameters can be sent as a URL encoded string or JSON (using the appropriate `Content-Type` header).
