@@ -71,6 +71,7 @@ toc_footers:
   - <a href="https://github.com/nightbot/api-docs" target="_blank">Contribute to these docs</a>
   - <a href="https://github.com/tripit/slate" target="_blank">(Docs Powered by Slate)</a>
 
+search: true
 ---
 
 # Introduction
