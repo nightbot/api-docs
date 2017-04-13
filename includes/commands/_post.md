@@ -50,8 +50,8 @@ The following parameters can be sent as a URL encoded string or JSON (using the 
 		<tr>
 			<td>coolDown</td>
 			<td>number</td>
-			<td>Optional</td>
-			<td>The minimum amount of seconds between command usage (prevents spam). Defaults to <code>30</code></td>
+			<td>Required</td>
+			<td>The minimum amount of seconds between command usage (prevents spam).</td>
 		</tr>
 		<tr>
 			<td>message</td>
@@ -68,8 +68,8 @@ The following parameters can be sent as a URL encoded string or JSON (using the 
 		<tr>
 			<td>userLevel</td>
 			<td>enum</td>
-			<td>Optional</td>
-			<td>The <a href="#userlevels">userlevel</a> required to use the command. Defaults to <code>everyone</code></td>
+			<td>Required</td>
+			<td>The <a href="#userlevels">userlevel</a> required to use the command.</td>
 		</tr>
 	</tbody>
 </table>
