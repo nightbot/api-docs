@@ -49,6 +49,12 @@ The following parameters can be sent as a URL encoded string or JSON (using the 
 	</thead>
 	<tbody>
 		<tr>
+			<td>enabled</td>
+			<td>boolean</td>
+			<td>Optional</td>
+			<td>The status of the timer. A value of true means the timer is enabled, while false means the timer is disabled and will not execute.</td>
+		</tr>
+		<tr>
 			<td>interval</td>
 			<td>string</td>
 			<td>Required</td>
