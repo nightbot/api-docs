@@ -39,11 +39,6 @@ The song request endpoints allow you to view, add, edit, and delete song from th
 			<td>If <code>true</code>, song requests will be limited to the configured <code>playlist</code>. If <code>false</code>, requests can be made from any listed <code>providers</code></td>
 		</tr>
 		<tr>
-			<td><code>limits</code><br><code>.playlistOnly</code></td>
-			<td>boolean</td>
-			<td>If <code>true</code>, song requests will be limited to the configured <code>playlist</code>. If <code>false</code>, requests can be made from any listed <code>providers</code></td>
-		</tr>
-		<tr>
 			<td><code>limits</code><br><code>.exemptUserLevel</code></td>
 			<td>enum</td>
 			<td>The <a href="#userlevels">userlevel</a> required to be exempt from the limits</td>
