@@ -26,6 +26,7 @@ curl -X GET "https://api.nightbot.tv/1/song_requests/queue" \
     }
   },
   "_requestsEnabled": true,
+  "_providers": ["soundcloud", "youtube"],
   "status": 200,
   "queue": [
     {
