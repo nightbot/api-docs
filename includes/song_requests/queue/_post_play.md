@@ -1,4 +1,4 @@
-## Skip current queue item
+## Resume current queue item
 
 ```cURL
 curl -X POST "https://api.nightbot.tv/1/song_requests/queue/play" \
