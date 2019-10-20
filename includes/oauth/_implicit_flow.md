@@ -2,7 +2,7 @@
 
 **1. Register an app**
 
-  First you need to register an OAuth application on the [applications page](https://beta.nightbot.tv/account/applications) of your account area. Name your app and specify a URL users should be redirected to after authorizing your app. Because this is a client-side flow, you do not need to generate or use a client secret.
+  First you need to register an OAuth application on the [applications page](https://nightbot.tv/account/applications) of your account area. Name your app and specify a URL users should be redirected to after authorizing your app. Because this is a client-side flow, you do not need to generate or use a client secret.
 
 **2. Once you have created an app, you can *302 redirect* users to our authorization endpoint:**
 
