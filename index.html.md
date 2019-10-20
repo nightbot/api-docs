@@ -44,6 +44,8 @@ includes:
   - song_requests/queue/get
   - song_requests/queue/post
   - song_requests/queue/delete
+  - song_requests/queue/post_play
+  - song_requests/queue/post_pause
   - song_requests/queue/post_skip
   - song_requests/queue/get_id
   - song_requests/queue/delete_id
