@@ -50,7 +50,7 @@ The following parameters can be sent as a URL encoded string or JSON (using the 
 			<td>blacklist</td>
 			<td>string</td>
 			<td>Optional</td>
-			<td>New-line delimited list of blacklisted phrases. Wildcards can be used. Only can be used with filters supporting a blacklist.</td>
+			<td>New-line delimited list of blacklisted phrases. Wildcards can be used (`*`). RegEx is also supported (`~/[pattern]/[flags]`). Only can be used with filters supporting a blacklist.</td>
 		</tr>
 		<tr>
 			<td>enabled</td>
@@ -92,7 +92,7 @@ The following parameters can be sent as a URL encoded string or JSON (using the 
 			<td>whitelist</td>
 			<td>string</td>
 			<td>Optional</td>
-			<td>New-line delimited list of whitelisted phrases. Only can be used with filters supporting a whitelist.</td>
+			<td>New-line delimited list of whitelisted phrases. For the link whitelist this parses hostnames (like `youtube.com` unless wildcards or regex is used). Wildcards can be used (`*`). RegEx is also supported (`~/[pattern]/[flags]`). Only can be used with filters supporting a whitelist.</td>
 		</tr>
 	</tbody>
 </table>
