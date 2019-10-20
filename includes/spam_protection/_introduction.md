@@ -36,7 +36,7 @@ The spam protection endpoints allow you to view, edit, enable, and disable spam 
 		<tr>
 			<td><code>blacklist</code></td>
 			<td>string, optional</td>
-			<td>New-line delimited list of blacklisted phrases. Wildcards can be used.</td>
+			<td>New-line delimited list of blacklisted phrases. Wildcards can be used (`*`). RegEx is also supported (`~/[pattern]/[flags]`). Only can be used with filters supporting a blacklist.</td>
 		</tr>
 		<tr>
 			<td><code>enabled</code></td>
@@ -71,7 +71,7 @@ The spam protection endpoints allow you to view, edit, enable, and disable spam 
 		<tr>
 			<td><code>whitelist</code></td>
 			<td>string, optional</td>
-			<td>New-line delimited list of whitelisted phrases.</td>
+			<td>New-line delimited list of whitelisted phrases. For the link whitelist this parses hostnames (like `youtube.com` unless wildcards or regex is used). Wildcards can be used (`*`). RegEx is also supported (`~/[pattern]/[flags]`). Only can be used with filters supporting a whitelist.</td>
 		</tr>
 	</tbody>
 </table>
