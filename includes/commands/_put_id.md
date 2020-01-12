@@ -60,7 +60,7 @@ The following parameters can be sent as a URL encoded string or JSON (using the 
 			<td>message</td>
 			<td>string</td>
 			<td>Optional</td>
-			<td>The message to send to chat. It can contain <a href="https://docs.nightbot.tv/commands/variables" target="_blank">variables</a> for extra functionality. Maximum length: 400 characters</td>
+			<td>The message to send to chat. It can contain <a href="https://docs.nightbot.tv/commands/variableslist" target="_blank">variables</a> for extra functionality. Maximum length: 400 characters</td>
 		</tr>
 		<tr>
 			<td>name</td>

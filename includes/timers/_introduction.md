@@ -41,7 +41,7 @@ The timers endpoints allow you to view, add, edit, and remove channel timers.
 		<tr>
 			<td><code>message</code></td>
 			<td>string</td>
-			<td>The message Nightbot sends to chat when the command is called. It can contain <a href="https://docs.nightbot.tv/commands/variables" target="_blank">variables</a> for extra functionality.</td>
+			<td>The message Nightbot sends to chat when the command is called. It can contain <a href="https://docs.nightbot.tv/commands/variableslist" target="_blank">variables</a> for extra functionality.</td>
 		</tr>
 		<tr>
 			<td><code>name</code></td>
