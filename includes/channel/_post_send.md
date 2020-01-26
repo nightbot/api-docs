@@ -44,5 +44,11 @@ The following parameters can be sent as a URL encoded string or JSON (using the 
 			<td>Required</td>
 			<td>The message to send to chat. Maximum length: 400 characters</td>
 		</tr>
+		<tr>
+			<td>chatId</td>
+			<td>string</td>
+			<td>Optional</td>
+			<td>The chat ID to send chat to. When not provided the message is sent to all chat rooms for this channel. This is only useful for YouTube channels with multiple concurrent chat rooms.</td>
+		</tr>
 	</tbody>
 </table>
