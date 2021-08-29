@@ -1,0 +1,1936 @@
+openapi: 3.0.1
+info:
+  title: Nightbot
+  version: '0.1'
+  description: defaultDescription
+  license:
+    name: MIT
+    url: https://github.com/nightbot/api-docs/blob/master/LICENSE
+servers:
+  - url: https://api.nightbot.tv/
+externalDocs:
+  url: https://api-docs.nightbot.tv/
+paths:
+  /1/channel:
+    get:
+      operationId: GetChannel
+      description: ''
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ChannelResponse'
+      security:
+        - oAuth2AuthCode:
+            - channel
+        - oAuth2Implicit:
+            - channel
+  /1/channel/join:
+    post:
+      operationId: JoinChannel
+      description: ''
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+      security:
+        - oAuth2AuthCode:
+            - channel
+        - oAuth2Implicit:
+            - channel
+  /1/channel/part:
+    post:
+      operationId: PartChannel
+      description: ''
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+      security:
+        - oAuth2AuthCode:
+            - channel
+        - oAuth2Implicit:
+            - channel
+  /1/channel/send:
+    post:
+      operationId: SendChannelMessage
+      description: ''
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/SendChannelMessageBody'
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SendChannelMessageBody'
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+      security:
+        - oAuth2AuthCode:
+            - channel_send
+        - oAuth2Implicit:
+            - channel_send
+  /1/commands:
+    get:
+      operationId: GetСustomСommands
+      description: ''
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CommandsResponse'
+      security:
+        - oAuth2AuthCode:
+            - commands
+        - oAuth2Implicit:
+            - commands
+    post:
+      operationId: AddNewСustomСommand
+      description: ''
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/AddNewCustomCommandBody'
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AddNewCustomCommandBody'
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CommandResponse'
+      security:
+        - oAuth2AuthCode:
+            - commands
+        - oAuth2Implicit:
+            - commands
+  /1/commands/{id}:
+    get:
+      operationId: GetСustomСommandById
+      description: ''
+      parameters:
+        - in: path
+          name: id
+          example: 56739fb5d0c250946ed6746e
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CommandResponse'
+      security:
+        - oAuth2AuthCode:
+            - commands
+        - oAuth2Implicit:
+            - commands
+    put:
+      operationId: EditСustomСommandById
+      description: ''
+      parameters:
+        - in: path
+          name: id
+          example: 56739fb5d0c250946ed6746e
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/EditCustomCommandBody'
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EditCustomCommandBody'
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CommandResponse'
+      security:
+        - oAuth2AuthCode:
+            - commands
+        - oAuth2Implicit:
+            - commands
+    delete:
+      operationId: DeleteСustomСommandById
+      description: ''
+      parameters:
+        - in: path
+          name: id
+          example: 56739fb5d0c250946ed6746e
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+      security:
+        - oAuth2AuthCode:
+            - commands
+        - oAuth2Implicit:
+            - commands
+  /1/commands/default:
+    get:
+      operationId: GetDefaultСommands
+      description: ''
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DefaultCommandsResponse'
+      security:
+        - oAuth2AuthCode:
+            - commands_default
+        - oAuth2Implicit:
+            - commands_default
+  /1/commands/default/{name}:
+    get:
+      operationId: GetDefaultСommandByName
+      description: ''
+      parameters:
+        - in: path
+          name: name
+          example: commands
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DefaultCommandResponse'
+      security:
+        - oAuth2AuthCode:
+            - commands_default
+        - oAuth2Implicit:
+            - commands_default
+    put:
+      operationId: EditDefaultСommandByName
+      description: ''
+      parameters:
+        - in: path
+          name: name
+          example: commands
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/EditDefaultCommandBody'
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EditDefaultCommandBody'
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DefaultCommandResponse'
+      security:
+        - oAuth2AuthCode:
+            - commands
+        - oAuth2Implicit:
+            - commands
+  /1/me:
+    get:
+      description: ''
+      operationId: GetСurrentUser
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCurrentUserResponse'
+      security:
+        - oAuth2AuthCode: []
+        - oAuth2Implicit: []
+  /1/regulars:
+    get:
+      description: ''
+      operationId: GetRegulars
+      parameters:
+        - in: query
+          name: limit
+          required: false
+          schema:
+            type: integer
+            format: int32
+            nullable: true
+            minimum: 1
+            maximum: 100
+        - in: query
+          name: offset
+          required: false
+          schema:
+            type: integer
+            format: int32
+            nullable: true
+        - in: query
+          name: q
+          required: false
+          schema:
+            type: string
+            nullable: true
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RegularsResponse'
+      security:
+        - oAuth2AuthCode:
+            - commands
+        - oAuth2Implicit:
+            - commands
+    post:
+      description: ''
+      operationId: AddNewRegular
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/AddNewRegularBody'
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AddNewRegularBody'
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RegularResponse'
+      security:
+        - oAuth2AuthCode:
+            - regulars
+        - oAuth2Implicit:
+            - regulars
+  /1/regulars/{id}:
+    get:
+      description: ''
+      operationId: GetRegularById
+      parameters:
+        - in: path
+          name: id
+          required: true
+          example: 56739fb5d0c250946ed67448
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RegularResponse'
+      security:
+        - oAuth2AuthCode:
+            - regulars
+        - oAuth2Implicit:
+            - regulars
+    delete:
+      description: ''
+      operationId: DeleteRegularById
+      parameters:
+        - in: path
+          name: id
+          required: true
+          example: 56739fb5d0c250946ed67448
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+      security:
+        - oAuth2AuthCode:
+            - regulars
+        - oAuth2Implicit:
+            - regulars
+  /1/song_requests:
+    get:
+      description: ''
+      operationId: GetSongRequestSettings
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SongRequestSettingsResponse'
+      security:
+        - oAuth2AuthCode:
+            - song_requests
+        - oAuth2Implicit:
+            - song_requests
+    put:
+      description: ''
+      operationId: EditSongRequestSettings
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/EditSongRequestSettingsBody'
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EditSongRequestSettingsBody'
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SongRequestSettingsResponse'
+      security:
+        - oAuth2AuthCode:
+            - song_requests
+        - oAuth2Implicit:
+            - song_requests
+  /1/song_requests/playlist:
+    get:
+      description: ''
+      operationId: GetPlaylist
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PlaylistResponse'
+      security:
+        - oAuth2AuthCode:
+            - song_requests_playlist
+        - oAuth2Implicit:
+            - song_requests_playlist
+    post:
+      description: ''
+      operationId: AddNewPlaylistItem
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/AddNewPlaylistItemBody'
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AddNewPlaylistItemBody'
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PlaylistItemResponse'
+      security:
+        - oAuth2AuthCode:
+            - song_requests_playlist
+        - oAuth2Implicit:
+            - song_requests_playlist
+    delete:
+      description: ''
+      operationId: ClearPlaylist
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+      security:
+        - oAuth2AuthCode:
+            - song_requests_playlist
+        - oAuth2Implicit:
+            - song_requests_playlist
+  /1/song_requests/playlist/import:
+    post:
+      description: ''
+      operationId: ImportRemotePlaylist
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/ImportRemotePlaylistBody'
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ImportRemotePlaylistBody'
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PlaylistResponse'
+      security:
+        - oAuth2AuthCode:
+            - song_requests_playlist
+        - oAuth2Implicit:
+            - song_requests_playlist
+  /1/song_requests/playlist/{id}:
+    get:
+      description: ''
+      operationId: GetPlaylistItemById
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+            example: 567baac77aa5ea140225baf0
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PlaylistItemResponse'
+      security:
+        - oAuth2AuthCode:
+            - song_requests_playlist
+        - oAuth2Implicit:
+            - song_requests_playlist
+    delete:
+      description: ''
+      operationId: DeletePlaylistItemById
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+            example: 567baac77aa5ea140225baf0
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+      security:
+        - oAuth2AuthCode:
+            - song_requests_playlist
+        - oAuth2Implicit:
+            - song_requests_playlist
+  /1/song_requests/queue:
+    get:
+      description: ''
+      operationId: GetQueue
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/QueueResponse'
+      security:
+        - oAuth2AuthCode:
+            - song_requests_queue
+        - oAuth2Implicit:
+            - song_requests_queue
+    post:
+      description: ''
+      operationId: AddNewQueueItem
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/AddNewPlaylistItemBody'
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AddNewPlaylistItemBody'
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/QueueItemResponse'
+      security:
+        - oAuth2AuthCode:
+            - song_requests_queue
+        - oAuth2Implicit:
+            - song_requests_queue
+    delete:
+      description: ''
+      operationId: ClearQueue
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+      security:
+        - oAuth2AuthCode:
+            - song_requests_queue
+        - oAuth2Implicit:
+            - song_requests_queue
+  /1/song_requests/queue/play:
+    post:
+      description: ''
+      operationId: ResumeCurrentQueueItem
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/QueueItemResponse'
+      security:
+        - oAuth2AuthCode:
+            - song_requests_queue
+        - oAuth2Implicit:
+            - song_requests_queue
+  /1/song_requests/queue/pause:
+    post:
+      description: ''
+      operationId: PauseCurrentQueueItem
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/QueueItemResponse'
+      security:
+        - oAuth2AuthCode:
+            - song_requests_queue
+        - oAuth2Implicit:
+            - song_requests_queue
+  /1/song_requests/queue/skip:
+    post:
+      description: ''
+      operationId: SkipCurrentQueueItem
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/QueueItemResponse'
+      security:
+        - oAuth2AuthCode:
+            - song_requests_queue
+        - oAuth2Implicit:
+            - song_requests_queue
+  /1/song_requests/queue/{id}:
+    get:
+      description: ''
+      operationId: GetQueueItemById
+      parameters:
+        - in: path
+          name: id
+          example: 567baac77aa5ea140225baf0
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/QueueItemResponse'
+      security:
+        - oAuth2AuthCode:
+            - song_requests_queue
+        - oAuth2Implicit:
+            - song_requests_queue
+    delete:
+      description: ''
+      operationId: DeleteQueueItemById
+      parameters:
+        - in: path
+          name: id
+          example: 567baac77aa5ea140225baf0
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+      security:
+        - oAuth2AuthCode:
+            - song_requests_queue
+        - oAuth2Implicit:
+            - song_requests_queue
+  /1/song_requests/queue/{id}/promote:
+    post:
+      description: ''
+      operationId: PromoteQueueItemById
+      parameters:
+        - in: path
+          name: id
+          example: 567baac77aa5ea140225baf0
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/QueueItemResponse'
+      security:
+        - oAuth2AuthCode:
+            - song_requests_queue
+        - oAuth2Implicit:
+            - song_requests_queue
+  /1/spam_protection:
+    get:
+      description: ''
+      operationId: GetFilters
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FiltersResponse'
+      security:
+        - oAuth2AuthCode:
+            - spam_protection
+        - oAuth2Implicit:
+            - spam_protection
+  /1/spam_protection/{type}:
+    get:
+      description: ''
+      operationId: GetFilterByType
+      parameters:
+        - in: path
+          name: type
+          example: blacklist
+          required: true
+          schema:
+            $ref: '#/components/schemas/FilterType'
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FilterResponse'
+      security:
+        - oAuth2AuthCode:
+            - spam_protection
+        - oAuth2Implicit:
+            - spam_protection
+    put:
+      description: ''
+      operationId: EditFilterByType
+      parameters:
+        - in: path
+          name: type
+          example: blacklist
+          required: true
+          schema:
+            $ref: '#/components/schemas/FilterType'
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/EditFilterByTypeBody'
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EditFilterByTypeBody'
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FilterResponse'
+      security:
+        - oAuth2AuthCode:
+            - spam_protection
+        - oAuth2Implicit:
+            - spam_protection
+  /1/subscribers:
+    get:
+      description: ''
+      operationId: GetSubscribers
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SubscribersResponse'
+      security:
+        - oAuth2AuthCode:
+            - subscribers
+        - oAuth2Implicit:
+            - subscribers
+    post:
+      description: ''
+      operationId: AddNewSubscriber
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/AddNewSubscriberBody'
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AddNewSubscriberBody'
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SubscriberResponse'
+      security:
+        - oAuth2AuthCode:
+            - subscribers
+        - oAuth2Implicit:
+            - subscribers
+  /1/subscribers/{id}:
+    get:
+      description: ''
+      operationId: GetSubscriberById
+      parameters:
+        - in: path
+          name: id
+          example: 56739fb5d0c250946ed67448
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SubscriberResponse'
+      security:
+        - oAuth2AuthCode:
+            - subscribers
+        - oAuth2Implicit:
+            - subscribers
+    delete:
+      description: ''
+      operationId: DeleteSubscriberById
+      parameters:
+        - in: path
+          name: id
+          example: 56739fb5d0c250946ed67448
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+      security:
+        - oAuth2AuthCode:
+            - subscribers
+        - oAuth2Implicit:
+            - subscribers
+  /1/timers:
+    get:
+      description: ''
+      operationId: GetTimers
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TimersResponse'
+      security:
+        - oAuth2AuthCode:
+            - timers
+        - oAuth2Implicit:
+            - timers
+    post:
+      description: ''
+      operationId: AddNewTimer
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/AddNewTimerBody'
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AddNewTimerBody'
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NewTimerResponse'
+      security:
+        - oAuth2AuthCode:
+            - timers
+        - oAuth2Implicit:
+            - timers
+  /1/timers/{id}:
+    get:
+      description: ''
+      operationId: GetTimerById
+      parameters:
+        - in: path
+          name: id
+          example: 568a4d15df4510b03deb65fc
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TimerResponse'
+      security:
+        - oAuth2AuthCode:
+            - timers
+        - oAuth2Implicit:
+            - timers
+    put:
+      description: ''
+      operationId: EditTimerById
+      parameters:
+        - in: path
+          name: id
+          example: 568a4d15df4510b03deb65fc
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/AddNewTimerBody'
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AddNewTimerBody'
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TimerResponse'
+      security:
+        - oAuth2AuthCode:
+            - timers
+        - oAuth2Implicit:
+            - timers
+    delete:
+      description: ''
+      operationId: DeleteTimerById
+      parameters:
+        - in: path
+          name: id
+          example: 568a4d15df4510b03deb65fc
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+      security:
+        - oAuth2AuthCode:
+            - timers
+        - oAuth2Implicit:
+            - timers
+components:
+  schemas:
+    Channel:
+      type: object
+      properties:
+        _id:
+          type: string
+          example: 567224fe9511a38f5114cae0
+        displayName:
+          type: string
+          example: Testing
+        joined:
+          type: boolean
+        name:
+          type: string
+          example: testing
+        plan:
+          type: string
+          example: 554eb4df3ee1bab94698bae8
+    ChannelResponse:
+      type: object
+      properties:
+        status:
+          type: integer
+          format: int32
+          example: 200
+        channel:
+          $ref: '#/components/schemas/Channel'
+    StatusResponse:
+      type: object
+      properties:
+        status:
+          type: integer
+          format: int32
+          example: 200
+    SendChannelMessageBody:
+      type: object
+      properties:
+        message:
+          type: string
+          example: test message
+    UserLevel:
+      type: string
+      example: everyone
+      enum:
+        - admin
+        - owner
+        - moderator
+        - twitch_vip
+        - regular
+        - subscriber
+        - everyone
+      description: >
+        * `admin` - Nightbot Administrator * `owner` - Channel Owner/Manager *
+        `moderator` - Channel Moderator * `twitch_vip` - Twitch VIP (only for
+        Twitch accounts) * `regular` - Nightbot Regular (users in the regulars
+        list) * `subscriber` - Paid Channel Subscriber (called "Channel Members"
+        on YouTube) * `everyone` - Normal User (default)
+    Command:
+      type: object
+      properties:
+        _id:
+          type: string
+          example: 56739fb5d0c250946ed6746e
+        coolDown:
+          type: integer
+          format: int32
+          example: 30
+        count:
+          type: integer
+          format: int32
+          example: 0
+        createdAt:
+          type: string
+          format: date-time
+          example: {}
+        message:
+          type: string
+          example: this is a test message
+        name:
+          type: string
+          example: '!testing'
+        updatedAt:
+          type: string
+          format: date-time
+          example: {}
+        userLevel:
+          $ref: '#/components/schemas/UserLevel'
+    CommandsResponse:
+      type: object
+      properties:
+        _total:
+          type: integer
+          format: int32
+          example: 30
+        status:
+          type: integer
+          format: int32
+          example: 200
+        commands:
+          type: array
+          items:
+            $ref: '#/components/schemas/Command'
+    AddNewCustomCommandBody:
+      type: object
+      properties:
+        coolDown:
+          type: integer
+          format: integer
+        message:
+          type: string
+        name:
+          type: string
+        userLevel:
+          $ref: '#/components/schemas/UserLevel'
+    EditCustomCommandBody:
+      type: object
+      properties:
+        coolDown:
+          type: integer
+          format: integer
+          nullable: true
+        count:
+          type: integer
+          format: integer
+          nullable: true
+        message:
+          type: string
+          nullable: true
+        name:
+          type: string
+          nullable: true
+        userLevel:
+          $ref: '#/components/schemas/UserLevel'
+    EditDefaultCommandBody:
+      type: object
+      properties:
+        coolDown:
+          type: integer
+          format: integer
+          nullable: true
+        enabled:
+          type: boolean
+          nullable: true
+        userLevel:
+          nullable: true
+          $ref: '#/components/schemas/UserLevel'
+    CommandResponse:
+      type: object
+      properties:
+        _total:
+          type: integer
+          format: int32
+          example: 30
+        status:
+          type: integer
+          format: int32
+          example: 200
+        commands:
+          type: array
+          items:
+            $ref: '#/components/schemas/Command'
+    DefaultCommand:
+      type: object
+      properties:
+        _name:
+          type: string
+          example: '!commands'
+        coolDown:
+          type: integer
+          format: int32
+          example: 30
+        enabled:
+          type: boolean
+        name:
+          type: string
+          example: '!testing'
+        userLevel:
+          $ref: '#/components/schemas/UserLevel'
+        _description:
+          type: string
+        _docs:
+          type: string
+          format: uri
+    DefaultCommandsResponse:
+      type: object
+      properties:
+        _total:
+          type: integer
+          format: int32
+          example: 30
+        status:
+          type: integer
+          format: int32
+          example: 200
+        commands:
+          type: array
+          items:
+            $ref: '#/components/schemas/DefaultCommand'
+    DefaultCommandResponse:
+      type: object
+      properties:
+        status:
+          type: integer
+          format: int32
+          example: 200
+        command:
+          $ref: '#/components/schemas/DefaultCommand'
+    Credential:
+      type: object
+      properties:
+        expires:
+          type: string
+          format: date-time
+          example: {}
+        client:
+          type: string
+          example: d3cfa25e47c9c18e51220e4757d8e57a
+    Scope:
+      type: string
+      example: channel
+      enum:
+        - channel
+        - channel_send
+        - commands
+        - commands_default
+        - regulars
+        - song_requests
+        - song_requests_queue
+        - song_requests_playlist
+        - spam_protection
+        - subscribers
+        - timers
+      description: >
+        * `channel` - View and edit channel settings and join/part the bot *
+        `channel_send` - Ability to send messages to the channel as Nightbot *
+        `commands` - View, add, edit, and remove channel custom commands *
+        `commands_default` - View, edit, enable, and disable channel default
+        commands * `regulars` - View, add, and remove channel regulars *
+        `song_requests` - View and edit channel song request settings *
+        `song_requests_queue` - View, add, edit, and remove songs on the channel
+        song request queue * `song_requests_playlist` - View, add, edit, and
+        remove songs on the channel song request playlist * `spam_protection` -
+        View, edit, enable, and disable channel spam protection filters *
+        `subscribers` - View, add, and remove channel subscribers (useful for
+        third party subscription services) * `timers` - View, add, edit, and
+        remove channel timers
+    Authorization:
+      type: object
+      properties:
+        userLevel:
+          $ref: '#/components/schemas/UserLevel'
+        authType:
+          type: string
+          example: oauth2
+        credentials:
+          $ref: '#/components/schemas/Credential'
+        scopes:
+          type: array
+          items:
+            $ref: '#/components/schemas/Scope'
+    Provider:
+      type: string
+      example: twitch
+      enum:
+        - twitch
+        - youtube
+    User:
+      type: object
+      properties:
+        _id:
+          type: string
+          example: 567224fe9511a38f5114cae0
+        admin:
+          type: boolean
+        avatar:
+          type: string
+          format: uri
+          example: >-
+            https://static-cdn.jtvnw.net/jtv_user_pictures/testing-profile_image-b209b2800a897689-300x300.png
+        displayName:
+          type: string
+          example: Testing
+        name:
+          type: string
+          example: testing
+        provider:
+          $ref: '#/components/schemas/Provider'
+        providerId:
+          type: string
+          example: '24895647'
+    GetCurrentUserResponse:
+      type: object
+      properties:
+        status:
+          type: integer
+          format: int32
+          example: 200
+        authorization:
+          $ref: '#/components/schemas/Authorization'
+        user:
+          $ref: '#/components/schemas/User'
+    Regular:
+      type: object
+      properties:
+        _id:
+          type: string
+          example: 56739fb5d0c250946ed67448
+        createdAt:
+          type: string
+          format: date-time
+          example: {}
+        displayName:
+          type: string
+          example: Test_User
+        name:
+          type: string
+          example: test_user
+        provider:
+          $ref: '#/components/schemas/Provider'
+        providerId:
+          type: string
+          example: '96837452'
+        updatedAt:
+          type: string
+          format: date-time
+          example: {}
+    RegularsResponse:
+      type: object
+      properties:
+        _total:
+          type: integer
+          format: int32
+          example: 30
+        status:
+          type: integer
+          format: int32
+          example: 200
+        regulars:
+          type: array
+          items:
+            $ref: '#/components/schemas/Regular'
+    AddNewRegularBody:
+      type: object
+      properties:
+        name:
+          type: string
+          example: test_user
+    RegularResponse:
+      type: object
+      properties:
+        status:
+          type: integer
+          format: int32
+          example: 200
+        regular:
+          $ref: '#/components/schemas/Regular'
+    SongRequestLimits:
+      type: object
+      properties:
+        queue:
+          type: integer
+          format: int32
+          nullable: true
+          example: 20
+        user:
+          type: integer
+          format: int32
+          nullable: true
+          example: 10
+        playlistOnly:
+          type: boolean
+          nullable: true
+        exemptUserLevel:
+          nullable: true
+          $ref: '#/components/schemas/UserLevel'
+    SongRequestPlaylist:
+      type: string
+      example: channel
+      enum:
+        - channel
+        - monstercat
+        - twitch_music_library
+    SongRequestProvider:
+      type: string
+      example: soundcloud
+      enum:
+        - soundcloud
+        - youtube
+    SongRequestYoutube:
+      type: object
+      properties:
+        limitToMusic:
+          type: boolean
+        limitToLikedVideos:
+          type: boolean
+    SongRequestSettings:
+      type: object
+      properties:
+        enabled:
+          type: boolean
+        limits:
+          $ref: '#/components/schemas/SongRequestLimits'
+        playlist:
+          $ref: '#/components/schemas/SongRequestPlaylist'
+        providers:
+          type: array
+          items:
+            $ref: '#/components/schemas/SongRequestProvider'
+        searchProvider:
+          $ref: '#/components/schemas/SongRequestProvider'
+        userLevel:
+          $ref: '#/components/schemas/UserLevel'
+        volume:
+          type: integer
+          format: int32
+          example: 59
+        youtube:
+          $ref: '#/components/schemas/SongRequestYoutube'
+    SongRequestProviders:
+      type: object
+      properties:
+        soundcloud:
+          type: string
+          example: SoundCloud
+        youtube:
+          type: string
+          example: YouTube
+    SongRequestPlaylists:
+      type: object
+      properties:
+        channel:
+          type: string
+          example: Channel
+        monstercat:
+          type: string
+          example: Monstercat
+        twitch_music_library:
+          type: string
+          example: Twitch Music Library
+    SongRequestSettingsResponse:
+      type: object
+      properties:
+        status:
+          type: integer
+          format: int32
+          example: 200
+        settings:
+          $ref: '#/components/schemas/SongRequestSettings'
+        providers:
+          $ref: '#/components/schemas/SongRequestProviders'
+        playlists:
+          $ref: '#/components/schemas/SongRequestPlaylists'
+    Track:
+      type: object
+      properties:
+        artist:
+          type: string
+          example: ERB
+          nullable: true
+        duration:
+          type: integer
+          format: int32
+          example: 168
+        provider:
+          $ref: '#/components/schemas/SongRequestProvider'
+        providerId:
+          type: string
+          example: njos57IJf-0
+        title:
+          type: string
+          example: Steve Jobs vs Bill Gates.  Epic Rap Battles of History Season 2.
+        url:
+          type: string
+          format: uri
+          example: https://youtu.be/njos57IJf-0
+    PlaylistItem:
+      type: object
+      properties:
+        _id:
+          type: string
+          example: 567baac77aa5ea140225baec
+        createdAt:
+          type: string
+          format: date-time
+          example: 2015-12-24T08:20:23.268Z
+        track:
+          $ref: '#/components/schemas/Track'
+        updatedAt:
+          type: string
+          format: date-time
+          example: 2015-12-24T08:20:23.268Z
+    Order:
+      type: string
+      nullable: true
+      example: asc
+      enum:
+        - asc
+        - desc
+    _Sort:
+      type: object
+      properties:
+        artist:
+          $ref: '#/components/schemas/Order'
+        date:
+          $ref: '#/components/schemas/Order'
+        random:
+          $ref: '#/components/schemas/Order'
+        title:
+          $ref: '#/components/schemas/Order'
+    PlaylistResponse:
+      type: object
+      properties:
+        status:
+          type: integer
+          format: int32
+          example: 200
+        _sort:
+          $ref: '#/components/schemas/_Sort'
+        _limit:
+          type: integer
+          format: int32
+          example: 25
+        _offset:
+          type: integer
+          format: int32
+          example: 0
+        _total:
+          type: integer
+          format: int32
+          example: 34
+        playlist:
+          type: array
+          items:
+            $ref: '#/components/schemas/PlaylistItem'
+    PlaylistItemResponse:
+      type: object
+      properties:
+        status:
+          type: integer
+          format: int32
+          example: 200
+        item:
+          $ref: '#/components/schemas/PlaylistItem'
+    Song:
+      type: object
+      properties:
+        _position:
+          type: integer
+          format: int32
+          nullable: true
+          example: 1
+        _id:
+          type: string
+          example: 56888945f788ea622d320c38
+        createdAt:
+          type: string
+          format: date-time
+          example: 2016-01-03T02:36:53.141Z
+        track:
+          $ref: '#/components/schemas/Track'
+        user:
+          $ref: '#/components/schemas/User'
+        updatedAt:
+          type: string
+          format: date-time
+          example: 2016-01-05T07:39:10.710Z
+    QueueResponse:
+      type: object
+      properties:
+        _total:
+          type: integer
+          format: int32
+          example: 1
+        _currentSong:
+          $ref: '#/components/schemas/Song'
+        _requestsEnabled:
+          type: boolean
+        _searchProvider:
+          $ref: '#/components/schemas/SongRequestProvider'
+        _providers:
+          type: array
+          items:
+            $ref: '#/components/schemas/SongRequestProvider'
+        status:
+          type: integer
+          format: int32
+          example: 200
+        queue:
+          type: array
+          items:
+            $ref: '#/components/schemas/Song'
+    QueueItemResponse:
+      type: object
+      properties:
+        status:
+          type: integer
+          format: int32
+          example: 200
+        item:
+          $ref: '#/components/schemas/Song'
+    EditSongRequestSettingsBody:
+      type: object
+      properties:
+        enabled:
+          type: boolean
+          nullable: true
+        limits:
+          nullable: true
+          $ref: '#/components/schemas/SongRequestLimits'
+        providers:
+          type: array
+          nullable: true
+          items:
+            $ref: '#/components/schemas/SongRequestProvider'
+        searchProvider:
+          nullable: true
+          $ref: '#/components/schemas/SongRequestProvider'
+        userLevel:
+          nullable: true
+          $ref: '#/components/schemas/UserLevel'
+        volume:
+          type: integer
+          format: int32
+          nullable: true
+          minimum: 0
+          maximum: 100
+        youtube:
+          $ref: '#/components/schemas/SongRequestYoutube'
+    AddNewPlaylistItemBody:
+      type: object
+      properties:
+        q:
+          type: string
+          example: https://youtu.be/N9qYF9DZPdw
+    ImportRemotePlaylistBody:
+      type: object
+      properties:
+        url:
+          type: string
+          format: uri
+          example: https://www.youtube.com/playlist?list=PLA11538113C16891A
+    FilterType:
+      type: string
+      example: blacklist
+      enum:
+        - blacklist
+        - caps
+        - emotes
+        - links
+        - symbols
+        - repetitions
+    Filter:
+      type: object
+      properties:
+        _limitMin:
+          type: integer
+          format: int32
+          nullable: true
+        _limitMax:
+          type: integer
+          format: int32
+          nullable: true
+        _name:
+          type: string
+          example: Blacklist Words/Phrases
+        _type:
+          $ref: '#/components/schemas/FilterType'
+        _description:
+          type: string
+          example: This filter allows you to timeout custom words phrases and patterns.
+        _docs:
+          type: string
+          format: uri
+          example: https://docs.nightbot.tv/spam-protection/blacklist
+        blacklist:
+          type: string
+          nullable: true
+          example: ◕_◕*\nᴘɪᴢᴢᴀ\nˢʷᵉᵃʳ
+        enabled:
+          type: boolean
+        exemptUserLevel:
+          $ref: '#/components/schemas/UserLevel'
+        length:
+          type: integer
+          format: int32
+          example: 600
+        limit:
+          type: integer
+          format: int32
+          nullable: true
+        message:
+          type: string
+          nullable: true
+          example: null
+        silent:
+          type: boolean
+        whitelist:
+          type: string
+          nullable: true
+    FiltersResponse:
+      type: object
+      properties:
+        status:
+          type: integer
+          format: int32
+          example: 200
+        filters:
+          type: array
+          items:
+            $ref: '#/components/schemas/Filter'
+    FilterResponse:
+      type: object
+      properties:
+        status:
+          type: integer
+          format: int32
+          example: 200
+        filter:
+          $ref: '#/components/schemas/Filter'
+    EditFilterByTypeBody:
+      type: object
+      properties:
+        blacklist:
+          type: string
+          nullable: true
+          example: ◕_◕*\nᴘɪᴢᴢᴀ\nˢʷᵉᵃʳ
+        enabled:
+          type: boolean
+        exemptUserLevel:
+          $ref: '#/components/schemas/UserLevel'
+        length:
+          type: integer
+          format: int32
+          example: 600
+        limit:
+          type: integer
+          format: int32
+          nullable: true
+        message:
+          type: string
+          nullable: true
+          example: null
+        silent:
+          type: boolean
+        whitelist:
+          type: string
+          nullable: true
+    Subscriber:
+      type: object
+      properties:
+        _id:
+          type: string
+          example: 56739fb5d0c250946ed67448
+        createdAt:
+          type: string
+          format: date-time
+          example: 2015-12-18T05:55:01.458Z
+        displayName:
+          type: string
+          example: Test_User
+        name:
+          type: string
+          example: test_user
+        provider:
+          $ref: '#/components/schemas/Provider'
+        providerId:
+          type: string
+          example: '96837452'
+        updatedAt:
+          type: string
+          format: date-time
+          example: 2015-12-18T05:55:01.458Z
+    SubscribersResponse:
+      type: object
+      properties:
+        _total:
+          type: integer
+          format: int32
+          example: 30
+        status:
+          type: integer
+          format: int32
+          example: 200
+        subscribers:
+          type: array
+          items:
+            $ref: '#/components/schemas/Subscriber'
+    SubscriberResponse:
+      type: object
+      properties:
+        status:
+          type: integer
+          format: int32
+          example: 200
+        subscriber:
+          $ref: '#/components/schemas/Subscriber'
+    AddNewSubscriberBody:
+      type: object
+      properties:
+        name:
+          type: string
+    Timer:
+      type: object
+      properties:
+        _id:
+          type: string
+          example: 568a4d15df4510b03deb65fc
+        createdAt:
+          type: string
+          format: date-time
+          example: 2016-01-04T10:44:37.440Z
+        enabled:
+          type: boolean
+        interval:
+          type: string
+          example: '*/15 * * * *'
+        lines:
+          type: integer
+          format: int32
+          example: 2
+        message:
+          type: string
+          example: test
+        name:
+          type: string
+          example: test
+        nextRunAt:
+          type: string
+          format: date-time
+          example: 1970-01-01T00:00:00.000Z
+        updatedAt:
+          type: string
+          format: date-time
+          example: 2016-01-04T10:44:37.440Z
+    TimersResponse:
+      type: object
+      properties:
+        _total:
+          type: integer
+          format: int32
+          example: 1
+        status:
+          type: integer
+          format: int32
+          example: 200
+        timers:
+          type: array
+          items:
+            $ref: '#/components/schemas/Timer'
+    NewTimerResponse:
+      type: object
+      properties:
+        status:
+          type: integer
+          format: int32
+          example: 200
+        command:
+          $ref: '#/components/schemas/Timer'
+    AddNewTimerBody:
+      type: object
+      properties:
+        enabled:
+          type: boolean
+        interval:
+          type: string
+          example: '*/15 * * * *'
+        lines:
+          type: integer
+          format: int32
+          example: 2
+        message:
+          type: string
+          example: test
+        name:
+          type: string
+          example: test
+    TimerResponse:
+      type: object
+      properties:
+        status:
+          type: integer
+          format: int32
+          example: 200
+        timer:
+          $ref: '#/components/schemas/Timer'
+  securitySchemes:
+    oAuth2AuthCode:
+      type: oauth2
+      flows:
+        authorizationCode:
+          authorizationUrl: /oauth2/authorize
+          tokenUrl: /oauth2/token
+          refreshUrl: /oauth2/token
+          scopes:
+            channel: View and edit channel settings and join/part the bot
+            channel_send: Ability to send messages to the channel as Nightbot
+            commands: View, add, edit, and remove channel custom commands
+            commands_default: View, edit, enable, and disable channel default commands
+            regulars: View, add, and remove channel regulars
+            song_requests: View and edit channel song request settings
+            song_requests_queue: >-
+              View, add, edit, and remove songs on the channel song request
+              queue
+            song_requests_playlist: >-
+              View, add, edit, and remove songs on the channel song request
+              playlist
+            spam_protection: View, edit, enable, and disable channel spam protection filters
+            subscribers: >-
+              View, add, and remove channel subscribers (useful for third party
+              subscription services)
+            timers: View, add, edit, and remove channel timers
+    oAuth2Implicit:
+      type: oauth2
+      flows:
+        implicit:
+          authorizationUrl: /oauth2/authorize
+          scopes:
+            channel: View and edit channel settings and join/part the bot
+            channel_send: Ability to send messages to the channel as Nightbot
+            commands: View, add, edit, and remove channel custom commands
+            commands_default: View, edit, enable, and disable channel default commands
+            regulars: View, add, and remove channel regulars
+            song_requests: View and edit channel song request settings
+            song_requests_queue: >-
+              View, add, edit, and remove songs on the channel song request
+              queue
+            song_requests_playlist: >-
+              View, add, edit, and remove songs on the channel song request
+              playlist
+            spam_protection: View, edit, enable, and disable channel spam protection filters
+            subscribers: >-
+              View, add, and remove channel subscribers (useful for third party
+              subscription services)
+            timers: View, add, edit, and remove channel timers
