@@ -1574,6 +1574,7 @@ components:
           format: int32
           example: 1
         _currentSong:
+          nullable: true
           $ref: '#/components/schemas/Song'
         _requestsEnabled:
           type: boolean
