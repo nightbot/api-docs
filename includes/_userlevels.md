@@ -6,6 +6,7 @@ In order to add access levels to features of Nightbot, we use the following user
 * **owner** - Channel Owner/Manager
 * **moderator** - Channel Moderator
 * **twitch_vip** - Twitch VIP (only for Twitch accounts)
+* **soop_vip** - SOOP VIP (only for SOOP accounts)
 * **regular** - Nightbot Regular (users in the regulars list)
 * **subscriber** - Paid Channel Subscriber (called "Channel Members" on YouTube)
 * **everyone** - Normal User (default)

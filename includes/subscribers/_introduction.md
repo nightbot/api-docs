@@ -38,7 +38,7 @@ This subscribers list complements any existing paid subscription service already
 		<tr>
 			<td><code>provider</code></td>
 			<td>enum</td>
-			<td>The auth provider for the subscriber (like <code>twitch</code> or <code>youtube</code>)</td>
+			<td>The auth provider for the subscriber (<code>twitch</code>, <code>youtube</code>, <code>trovo</code>, <code>noice</code>, <code>soop</code>)</td>
 		</tr>
 		<tr>
 			<td><code>providerId</code></td>
