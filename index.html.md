@@ -8,7 +8,6 @@ includes:
   - oauth/basic_steps
   - oauth/scopes
   - oauth/auth_code_flow
-  - oauth/implicit_flow
   - oauth/refreshing_tokens
   - oauth/revoking_tokens
   - channel/introduction
