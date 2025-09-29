@@ -229,7 +229,7 @@ The song request endpoints allow you to view, add, edit, and delete song from th
 		<tr>
 			<td><code>user</code><br><code>.provider</code></td>
 			<td>enum</td>
-			<td>User provider (<code>twitch</code>, <code>youtube</code>, <code>trovo</code>, <code>noice</code>, <code>soop</code>, <code>discord</code>)</td>
+			<td>User provider (<code>twitch</code>, <code>youtube</code>, <code>trovo</code>, <code>soop</code>, <code>discord</code>)</td>
 		</tr>
 		<tr>
 			<td><code>user</code><br><code>.providerId</code></td>

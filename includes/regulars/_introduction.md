@@ -36,7 +36,7 @@ The regulars endpoints allow you to view, add, edit, and remove channel regulars
 		<tr>
 			<td><code>provider</code></td>
 			<td>enum</td>
-			<td>The auth provider for the regular (<code>twitch</code>, <code>youtube</code>, <code>trovo</code>, <code>noice</code>, <code>soop</code>)</td>
+			<td>The auth provider for the regular (<code>twitch</code>, <code>youtube</code>, <code>trovo</code>, <code>soop</code>)</td>
 		</tr>
 		<tr>
 			<td><code>providerId</code></td>
